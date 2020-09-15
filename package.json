@@ -1,0 +1,32 @@
+{
+  "name": "eat-da-burger-application",
+  "version": "1.0.0",
+  "description": "Burger logger with MySQL, Node, Express, Handlebars and a homemade ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application.git"
+  },
+  "keywords": [
+    "MySql",
+    "Node",
+    "Express",
+    "Handlebars",
+    "and",
+    "ORM"
+  ],
+  "author": "Saudamini Keshav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application/issues"
+  },
+  "homepage": "https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
