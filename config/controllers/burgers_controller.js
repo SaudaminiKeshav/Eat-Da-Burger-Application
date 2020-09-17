@@ -6,12 +6,22 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  burger.all(function(data) {
+router.get("/", function (req, res) {
+  burger.all(function (data) {
     console.log(data);
-    res.render("index", {burgers:data});
+    res.render("index", { burgers: data });
   });
 });
 
+router.post("api/burgers", function (req, res) {
+  console.log("New burger POST request: ", req.body);
+
+  burger.create(["burger_name", "devoured"],
+    // Properties from object in POST
+    [req.body.burger_name, req.body.devoured], function (result) {
+      // Send back the ID of the new burger
+      res.json({ id: result.insertId });
+    });
+})
 // Export routes for server.js to use.
 module.exports = router;
