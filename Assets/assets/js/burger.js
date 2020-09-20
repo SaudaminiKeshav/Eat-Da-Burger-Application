@@ -33,20 +33,36 @@ $(function () {
 
     // Change to opposite devoured state
     let newBurgerState = {
-        devoured: !newBurger
+      devoured: !newBurger
     };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
-        type: "PUT",
-        data: newBurgerState
+      type: "PUT",
+      data: newBurgerState
     }).then(
-        function () {
-            console.log("Changed devoured to", newBurgerState);
-            // Reload the page to get the updated list
-            location.reload();
-        }
+      function () {
+        console.log("Changed devoured to", newBurgerState);
+        // Reload the page to get the updated list
+        location.reload();
+      }
     );
-});
+  });
+
+  // Delete button
+  $(".delete-burger").on("click", function (event) {
+    let id = $(this).data("id");
+
+    // Send the DELETE request.
+    $.ajax("/api/burgers/" + id, {
+      type: "DELETE"
+    }).then(
+      function () {
+        console.log("Deleted burger", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
 
 });
