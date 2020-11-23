@@ -1,19 +1,29 @@
 {
   "name": "full_stack_burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "An MVC burger logger ORM",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "mysql -h localhost -u root -p < ./db/db.sql"
   },
+  "keywords": [
+    "mysql",
+    "express",
+    "handlebars",
+    "ORM",
+    "MVC",
+    "Node"
+  ],
   "author": "Saudamini Keshav",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
+    "express-handlebars": "^4.0.4",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+    "nodemon": "^2.0.4"
   }
 }
