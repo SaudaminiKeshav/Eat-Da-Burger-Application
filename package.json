@@ -1,43 +1,29 @@
 {
-  "name": "eat-da-burger-application",
+  "name": "full_stack_burgers",
   "version": "1.0.0",
-  "description": "Burger logger with MySQL, Node, Express, Handlebars and a homemade ORM",
+  "description": "An MVC burger logger ORM",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "mysql -h localhost -u root -p < ./db/db.sql"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application.git"
-  },
   "keywords": [
-    "MySql",
-    "Node",
-    "Express",
-    "Handlebars",
-    "ORM"
+    "mysql",
+    "express",
+    "handlebars",
+    "ORM",
+    "MVC",
+    "Node"
   ],
   "author": "Saudamini Keshav",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application/issues"
-  },
-  "homepage": "https://github.com/SaudaminiKeshav/Eat-Da-Burger-Application#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "heroku": "^7.43.0",
-    "heroku-cli": "^7.0.9",
-    "mysql": "^2.18.1",
-    "sequelize": "^6.3.5",
-    "sequelize-cli": "^6.2.0"
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  },
-  "engines": {
-    "node": "12.18.3"
   }
 }
