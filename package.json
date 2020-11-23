@@ -1,5 +1,5 @@
 {
-  "name": "full_stack_burgers",
+  "name": "full_stack_burger",
   "version": "1.0.0",
   "description": "An MVC burger logger ORM",
   "main": "server.js",
