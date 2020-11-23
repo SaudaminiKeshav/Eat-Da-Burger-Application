@@ -1,5 +1,5 @@
-// Set up MySQL connection.
-var mysql = require("mysql");
+// Set up connection from Node to MySQL and export the connection
+const mysql = require('mysql');
 
 let connection;
 
@@ -11,11 +11,12 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: "password",
-    database: "burgers_db"
+    database: "burgers_DB"
   })
 };
-// Make connection.
-connection.connect(function (err) {
+
+// Make connection
+connection.connect(err => {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
